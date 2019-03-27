@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/new/new"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "lookThePicture",
+    "navigationBarBackgroundColor": "#ff80ab",
+    "backgroundColor": "#efefef"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "color": "#444",
+    "selectedColor": "#ff80ab",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/new/new",
+        "iconPath": "static/index-0.png",
+        "selectedIconPath": "static/hot-1.png",
+        "text": "最新"
+      },
+      {}
+    ]
+  },
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "lookThePicture"
+}
