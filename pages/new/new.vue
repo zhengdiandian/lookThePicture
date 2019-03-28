@@ -2,11 +2,8 @@
 	<view class="index">
 		<block v-for="(item, index) in list" :key="index">
 			<view class="card" @tap="goDetail(item)">
-<<<<<<< HEAD
 				<img class="card-img" :src="item.img_src" mode="aspectFill"></image>
-=======
 				<img class="card-img" :src="item.img_src" mode="aspecFill"></image>
->>>>>>> a7bd604864b345cc4fd5db1052b1cb2e33722b02
 				<text class="card-num-view">{{item.img_num}}P</text>
 				<view class="card-bottom row">
 					<view class="car-title-view row">
@@ -43,6 +40,7 @@
 		onPullDowmReach() {
 			// 页面下拉
 			this.refreshing = true
+			this.getData()
 		},
 		methods:{
 			init() {
