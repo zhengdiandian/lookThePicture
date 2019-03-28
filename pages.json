@@ -6,51 +6,61 @@
 				"navigationBarTitleText": "new picture",
 				"enablePullDownRefresh": true
 
-				}
-			},
-			{
-				"path": "pages/detail/detail",
-				"style": {
-					"navigationBarTitleText":" picture info",
-					// 'enablePullDownRefresh': true
-					"navigationBarBackgroundColor":"#000",
-					"backgroundColor":"#000",
-					"app-plus": {
-						"bounce":"none",
-						"titleNView": {
-							"buttons": [
-								{
-								"type":"share"
-							}
-							]
-						}
-					},
-					"h5": {
-						"buttons": [
-							{
+			}
+		},
+		{
+			"path":"pages/hot/hot",
+			"style": {
+				"navigationBarTitleText":"Hot",
+				"enablePullDownRefresh": true
+			}
+		},
+
+
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": " picture info",
+				// 'enablePullDownRefresh': true
+				"navigationBarBackgroundColor": "#000",
+				"backgroundColor": "#000",
+				"app-plus": {
+					"bounce": "none",
+					"titleNView": {
+						"buttons": [{
 							"type": "share"
-							},
-							{
-							"type": "favorite"	
-							}
-						]
+						}]
 					}
+				},
+				"h5": {
+					"buttons": [{
+							"type": "share"
+						},
+						{
+							"type": "favorite"
+						}
+					]
 				}
+			}
 		}
 	],
-	"tabBar":{
-		"color":"#444",
-		"selectedColor":"#ff80ab",
-		"borderStyle":"black",
-		"backgroundColor":"#fff",
-		"list": [
-			{
-				"pagePath":"pages/new/new",
-				"iconPath":"static/index-0.png",
-				"selectedIconPath":"static/hot-1.png",
-				"text":"最新"
+	"tabBar": {
+		"color": "#444",
+		"selectedColor": "#ff80ab",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"list": [{
+				"pagePath": "pages/new/new",
+				"iconPath": "static/index-0.png",
+				"selectedIconPath": "static/hot-1.png",
+				"text": "最新"
 			},
-			{}
+			{
+				"pagePath": "pages/hot/hot",
+				"iconPath": "static/hot-0.png",
+				"selectedIconPath": "static/hot-1.png",
+				"text": "推荐"
+			}
 		]
 	},
 	"globalStyle": {

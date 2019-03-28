@@ -22,8 +22,7 @@
         "iconPath": "static/index-0.png",
         "selectedIconPath": "static/hot-1.png",
         "text": "最新"
-      },
-      {}
+      }
     ]
   },
   "splashscreen": {

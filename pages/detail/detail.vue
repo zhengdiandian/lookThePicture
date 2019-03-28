@@ -37,6 +37,47 @@
 		onLoad (e) {
 			this.init(e)
 		},
+		onNavigationBarButtonTap(e) {
+			if(e.index === 1) {
+				this.collect()
+				return
+			}
+			if(this.providerList.length === 0) {
+				uni.showToast({
+					title: '当前环境无分享渠道',
+					mask: false,
+					duration: 1500
+				});
+				return
+			}
+			let itemList = this.providerList.map(val => val.name)
+			uni.showActionSheet({
+				itemList,
+				success: (res) => {
+					uni.share({
+						provider: this.providerList[res.tapIndex].id,
+						type: 0,
+						title: 'lookThePicture',
+						href: 'https://www.baidu.com',
+						imageUrl: this.data[this.index],
+						success: res => {},
+						fail: (e) => {
+							uni.showModal({
+								title: e.errMsg,
+								content: e.errMsg,
+								showCancel: false,
+								cancelText: '',
+								confirmText: '',
+								success: res => {},
+								fail: () => {},
+								complete: () => {}
+							});
+						},
+						complete: () => {}
+					});
+				}
+			})
+		},
 		methods: {
 			init(e) {
 				let data = JSON.parse(decodeURIComponent(e.data))
@@ -159,30 +200,42 @@
 					title: '点击收藏'
 				})
 			},
-			// #ifndef APP-PLUS
+			// #ifdef APP-PLUS
 			setting() {
 				uni.showToast({
 					title: '正在设置壁纸',
-					mask: false,
+					// mask: false,
 				});
 				setTimeout(() => {
-					const Main = plus.android.runtimeMainActivity()
-					const WallpaperManager = plus.android.importClass("android.app.WallpaperManager").getInstance(Main)
-					plus.android.importClass(WallpaperManager)
-					const Bitmapfactory = plus.android.importClass('android.app.Bitmapfactory')
+					try{
+						var Main = plus.android.runtimeMainActivity()
+						var WallpaperManager = plus.android.importClass("android.app.WallpaperManager")
+						var wallpaperManager =WallpaperManager.getInstance(Main)
+						plus.android.importClass(wallpaperManager)
+						var Bitmapfactory = plus.android.importClass('android.graphics.BitmapFactory')
+					}catch(e){
+						console.log('216hang',e)
+						//TODO handle the exception
+					}
+					
 					uni.downloadFile({
 						url: this.data[this.index],
 						success: (e) => {
-							let filePath = e.tempFilePath.replace('file://', '')
-							let bitmap = Bitmapfactory.decodemap(filePath)
+							var filePath = e.tempFilePath.replace('file://', '')
+							console.log('path',JSON.stringify(e))
+							filePath = plus.io.convertAbsoluteFileSystem(filePath)
+							var bitmap = Bitmapfactory.decodeFile(filePath)
 							try {
-								WallpaperManager.getBitmap(bitmap)
+								wallpaperManager.setBitmap(bitmap)
+								bitmap.recycle()
 								uni.showToast({
 									title: '设置壁纸成功',
 									mask: false,
 									duration: 1500
 								});
 							} catch (e) {
+								console.error('err',e.errMsg)
+
 								uni.showToast({
 									title: '设置壁纸失败',
 									mask: false,
@@ -191,6 +244,7 @@
 							}
 						},
 						fail: (e) => {
+							console.error('err',e)
 							uni.showToast({
 								title: '设置壁纸失败',
 								mask: false,

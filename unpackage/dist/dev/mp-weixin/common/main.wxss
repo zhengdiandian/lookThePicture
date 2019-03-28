@@ -13,7 +13,7 @@
 
 
 
-/*每个页面公共css */
+	/*每个页面公共css */
 @font-face {
 	font-family: texticons;
 	font-weight: normal;
@@ -151,7 +151,7 @@
 	-webkit-line-clamp: 2;
 	overflow: hidden;
 }
-/*双列表*/
+	/*双列表*/
 .card-list2 {
 	width: 345rpx;
 	margin: 20rpx 0 20rpx 20rpx;
@@ -179,7 +179,7 @@
 	color: #555;
 	margin-bottom: 20rpx;
 }
-/* 分类页面 */
+	/* 分类页面 */
 .tags {
 	background: #fff;
 	-webkit-box-flex: 1;
@@ -223,7 +223,7 @@ view.tag,.tag {
 	font-size: 28rpx;
 	color: #555555;
 }
-/* 个人中心 */
+	/* 个人中心 */
 .center {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -362,7 +362,7 @@ view.tag,.tag {
 	text-align: right;
 	font-family: texticons;
 }
-/* 登录 */
+	/* 登录 */
 .loginView {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -461,7 +461,7 @@ view.tag,.tag {
 .login.hover {
 	opacity: 0.6;
 }
-/* 详情页面 */
+	/* 详情页面 */
 .detail-btn-view {
 	width: 750rpx;
 	position: fixed;
@@ -505,5 +505,30 @@ view.tag,.tag {
 	-webkit-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;
+}
+page,
+    view {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+}
+page {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        min-height: 100%;
+        background-color: #EFEFEF;
+}
+template {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
 }
 
