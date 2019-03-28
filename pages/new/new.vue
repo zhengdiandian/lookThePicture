@@ -2,15 +2,14 @@
 	<view class="index">
 		<block v-for="(item, index) in list" :key="index">
 			<view class="card" @tap="goDetail(item)">
-				<img class="card-img" :src="item.img_src"></img>
+				<img class="card-img" :src="item.img_src" mode="aspecFill"></image>
 				<text class="card-num-view">{{item.img_num}}P</text>
 				<view class="card-bottom row">
 					<view class="car-title-view row">
 						<text class="cart-title">{{item.title}}</text>
-
 					</view>
+					<view @click.stop="share(item)" class="card-share-view"></view>
 				</view>
-				<view @click.stop="share(item)" class="card-share-view"></view>
 			</view>
 		</block>
 		<text class="loadMore">加载中...</text>
