@@ -3,7 +3,6 @@
 		<block v-for="(item, index) in list" :key="index">
 			<view class="card" @tap="goDetail(item)">
 				<img class="card-img" :src="item.img_src" mode="aspectFill"></image>
-				<img class="card-img" :src="item.img_src" mode="aspecFill"></image>
 				<text class="card-num-view">{{item.img_num}}P</text>
 				<view class="card-bottom row">
 					<view class="car-title-view row">
