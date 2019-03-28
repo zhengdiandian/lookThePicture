@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/new/new"
+    "pages/new/new",
+    "pages/detail/detail"
   ],
   "subPackages": [],
   "window": {

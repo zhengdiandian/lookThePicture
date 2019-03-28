@@ -3,10 +3,39 @@
 		{
 			"path": "pages/new/new",
 			"style": {
-				"navigationBarTitleText": "lookThePicture",
+				"navigationBarTitleText": "new picture",
 				"enablePullDownRefresh": true
 
-			}
+				}
+			},
+			{
+				"path": "pages/detail/detail",
+				"style": {
+					"navigationBarTitleText":" picture info",
+					// 'enablePullDownRefresh': true
+					"navigationBarBackgroundColor":"#000",
+					"backgroundColor":"#000",
+					"app-plus": {
+						"bounce":"none",
+						"titleNView": {
+							"buttons": [
+								{
+								"type":"share"
+							}
+							]
+						}
+					},
+					"h5": {
+						"buttons": [
+							{
+							"type": "share"
+							},
+							{
+							"type": "favorite"	
+							}
+						]
+					}
+				}
 		}
 	],
 	"tabBar":{
