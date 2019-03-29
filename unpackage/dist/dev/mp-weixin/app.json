@@ -29,6 +29,12 @@
         "iconPath": "static/hot-0.png",
         "selectedIconPath": "static/hot-1.png",
         "text": "最热"
+      },
+      {
+        "pagePath": "pages/tag/tag",
+        "iconPath": "static/tag-0.png",
+        "selectedIconPath": "static/tag-1.png",
+        "text": "分类"
       }
     ]
   }
