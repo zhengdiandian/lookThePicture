@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/new/new",
+    "pages/hot/hot",
     "pages/detail/detail"
   ],
   "subPackages": [],
@@ -22,6 +23,12 @@
         "iconPath": "static/index-0.png",
         "selectedIconPath": "static/hot-1.png",
         "text": "最新"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "iconPath": "static/hot-0.png",
+        "selectedIconPath": "static/hot-1.png",
+        "text": "最热"
       }
     ]
   },

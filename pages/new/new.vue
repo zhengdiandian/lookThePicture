@@ -26,9 +26,9 @@
 				fetchPageNum: 1
 			}
 		},
-		created() {
-			this.init()
-		},
+// 		created() {
+// 			this.init()
+// 		},
 		onLoad() {
 			this.init()
 		},

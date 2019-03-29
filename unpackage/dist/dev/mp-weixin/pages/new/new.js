@@ -123,9 +123,9 @@ __webpack_require__.r(__webpack_exports__);
       fetchPageNum: 1 };
 
   },
-  created: function created() {
-    this.init();
-  },
+  // 		created() {
+  // 			this.init()
+  // 		},
   onLoad: function onLoad() {
     this.init();
   },
@@ -133,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
     //滑动到页底
     this.getData();
   },
-  onPullDowmReach: function onPullDowmReach() {
+  onPullDownRefresh: function onPullDownRefresh() {
     // 页面下拉
     this.refreshing = true;
     this.getData();

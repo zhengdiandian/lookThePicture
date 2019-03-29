@@ -28,7 +28,7 @@
         "pagePath": "pages/hot/hot",
         "iconPath": "static/hot-0.png",
         "selectedIconPath": "static/hot-1.png",
-        "text": "推荐"
+        "text": "最热"
       }
     ]
   }
