@@ -36,7 +36,7 @@
 			//滑动到页底
 			this.getData()
 		},
-		onPullDowmReach() {
+		onPullDownRefresh() {
 			// 页面下拉
 			this.refreshing = true
 			this.getData()
