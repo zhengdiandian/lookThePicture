@@ -1,4 +1,5 @@
 {
+  "usingComponents": {},
   "navigationBarTitleText": "new picture",
   "enablePullDownRefresh": true
 }

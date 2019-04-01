@@ -439,18 +439,18 @@ view.tag,.tag {
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 }
-._button {
+button {
 	width: 710rpx;
 	height: 80rpx;
 	line-height: 80rpx;
 	text-align: center;
 	font-size: 38rpx;
 }
-._button.login {
+button.login {
 	background-color: #FF80AB;
 	color: #fff;
 }
-._button.register {
+button.register {
 	margin-top: 30rpx;
 	color: #FF80AB;
 	background-color: #fff;

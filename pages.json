@@ -46,6 +46,35 @@
 					]
 				}
 			}
+		},
+		{
+			"path":"pages/list/list",
+			"navigationBarTitleText": "专题",
+			"enablePullDownRefresh": true
+			
+		},
+		{
+			"path":"pages/center/center",
+			"navigationBarTitleText": "個人中心",
+			"enablePullDownRefresh": true
+		},
+		{
+			"path":"pages/platforms/app-plus/about/about",
+			"style": {
+				"navigationBarTitleText":"关于"
+			}
+		},
+		{
+			"path":"pages/platforms/h5/about/about",
+			"style":{
+				"navigationBarTitleText":"关于"
+			}
+		},
+		{
+			"path":"pages/login/login",
+			"style": {
+				"navigationBarTitleText":"登入"
+			}
 		}
 	],
 	"tabBar": {
@@ -70,6 +99,12 @@
 				"iconPath":"static/tag-0.png",
 				"selectedIconPath":"static/tag-1.png",
 				"text":"分类"
+			},
+			{
+				"pagePath":"pages/center/center",
+				"iconPath":"static/center-0.png",
+				"selectedIconPath":"static/center-1.png",
+				"text":"個人中心"
 			}
 		]
 	},

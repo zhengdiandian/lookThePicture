@@ -2,7 +2,13 @@
   "pages": [
     "pages/new/new",
     "pages/hot/hot",
-    "pages/detail/detail"
+    "pages/tag/tag",
+    "pages/detail/detail",
+    "pages/list/list",
+    "pages/center/center",
+    "pages/platforms/app-plus/about/about",
+    "pages/platforms/h5/about/about",
+    "pages/login/login"
   ],
   "subPackages": [],
   "window": {
@@ -35,6 +41,12 @@
         "iconPath": "static/tag-0.png",
         "selectedIconPath": "static/tag-1.png",
         "text": "分类"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/center-0.png",
+        "selectedIconPath": "static/center-1.png",
+        "text": "個人中心"
       }
     ]
   }
